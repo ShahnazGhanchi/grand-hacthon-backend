@@ -9,7 +9,7 @@ const ticketRoutes = require("./routes/ticketRoutes");
 
 const app = express();
 
-connectDB();
+connectDB().catch(err => console.log("DB Error:", err));
 
 app.use(cors());
 app.use(express.json());
